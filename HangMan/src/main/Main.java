@@ -23,14 +23,96 @@ public static void main(String[] args) {
 		
 }
 public static void game(String guess) {
-	String newReplace = "";
+	String newReplace = " ";
 	for (int i = 0; i < word.length(); i++) {
 			if(guess == word) {
-				newReplace += guess;
-			}
-		
-		
+				newReplace += guess;}
+			
 		}
+		
+	}
 	
+	public static void hangmanImage() {
+		if (attempts == 1) {
+			System.out.println("Wrong guess, try again");
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			System.out.println("___|___");
+			System.out.println();
+		}
+		if (attempts == 2) {
+			System.out.println("Wrong guess, try again");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("___|___");
+		}
+		if (attempts == 3) {
+			System.out.println("Wrong guess, try again");
+			System.out.println("   ____________");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   | ");
+			System.out.println("___|___");
+		}
+		if (attempts == 4) {
+			System.out.println("Wrong guess, try again");
+			System.out.println("   ____________");
+			System.out.println("   |          _|_");
+			System.out.println("   |         /   \\");
+			System.out.println("   |        |     |");
+			System.out.println("   |         \\_ _/");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("   |");
+			System.out.println("___|___");
+		}
+		if (attempts == 5) {
+			System.out.println("Wrong guess, try again");
+			System.out.println("   ____________");
+			System.out.println("   |          _|_");
+			System.out.println("   |         /   \\");
+			System.out.println("   |        |     |");
+			System.out.println("   |         \\_ _/");
+			System.out.println("   |           |");
+			System.out.println("   |           |");
+			System.out.println("   |");
+			System.out.println("___|___");
+		}
+		if (attempts == 6) {
+			System.out.println("Wrong guess, try again");
+			System.out.println("   ____________");
+			System.out.println("   |          _|_");
+			System.out.println("   |         /   \\");
+			System.out.println("   |        |     |");
+			System.out.println("   |         \\_ _/");
+			System.out.println("   |           |");
+			System.out.println("   |           |");
+			System.out.println("   |          / \\ ");
+			System.out.println("___|___      /   \\");
+		}
+		if (attempts == 7) {
+			System.out.println("GAME OVER!");
+			System.out.println("   ____________");
+			System.out.println("   |          _|_");
+			System.out.println("   |         /   \\");
+			System.out.println("   |        |     |");
+			System.out.println("   |         \\_ _/");
+			System.out.println("   |          _|_");
+			System.out.println("   |         / | \\");
+			System.out.println("   |          / \\ ");
+			System.out.println("___|___      /   \\");
+			System.out.println("GAME OVER! The word was " + word);
+		}
 	}
 }
