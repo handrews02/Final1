@@ -15,8 +15,7 @@ public class Main
 	
 	public static void displayWord1()
 	{
-		char[] word = null;
-		System.out.print(word);
+		
 		
 		
 		
