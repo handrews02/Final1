@@ -14,11 +14,19 @@ public static void main(String[] args) {
 		
 		Scanner input = new Scanner(System.in);
 		
+
+	}
+	
+	public static void displayWord1()
+	{
+		
+
 		while (attempts < 7 && replace.contains("*")) {
 			System.out.println("Guess a letter in the word>> ");
 			System.out.println(replace);
 			String guess = input.next();
 			game(guess);}
+
 		
 		
 }
