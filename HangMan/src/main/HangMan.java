@@ -5,16 +5,20 @@ public class HangMan {
 
 	private static String[] words = {"courageous", "magnificent", "terrible", "righteous", "superficial" };
 	private static String word = words[(int) (Math.random() * words.length)];
+	//chooses a random word from the array above
 	private static String replace = new String(new char[word.length()]).replace("\0", "*");
+	//replaces every letter in the random word that is selected and replaces it with an asterisk
 	private static int attempts = 0;
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
 		while (attempts < 7 && replace.contains("*")) {
+		//as long as the attempt number is less than 7 and there are still asterisks left, the user still can guess
 			System.out.println("Guess any letter in the word");
 			System.out.println(replace);
 			String guess = input.next();
+		//the user will input a letter
 			hang(guess);
 		}
 		input.close();
@@ -35,6 +39,7 @@ public class HangMan {
 		if (replace.equals(newreplace)) {
 			attempts++;
 			hangmanImage();
+		//wrong letter entered =attempts goes up 1 and the hangman image will appear. Depending on the attempt number chooses the version of the hangman image that will appear
 		} else {
 			replace = newreplace;
 		}
@@ -44,6 +49,7 @@ public class HangMan {
 	}
 
 	public static void hangmanImage() {
+		//when user enters the wrong attempt,the hangman image will appear
 		if (attempts == 1) {
 			System.out.println("Wrong guess, try again");
 			System.out.println();
