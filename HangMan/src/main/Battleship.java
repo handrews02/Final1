@@ -2,13 +2,14 @@ package main;
 
 import java.util.Scanner;
 
-public class battleship 
+public class Battleship 
 {
 
 	public static void main(String[] args) 
 	{
 		displayStart();
 		displayShipPlacement();
+		displayShotGuesses();
 		
 		
 		
@@ -24,13 +25,37 @@ public class battleship
 	
 		if(start == 1)
 		{
-	
+	String A1 = "X";
+	String A2 = "X";
+	String A3 = "X";
+	String A4 = "X";
+	String A5 = "X";
+	String B1 = "X";
+	String B2 = "X";
+	String B3 = "X";
+	String B4 = "X";
+	String B5 = "X";
+	String C1 = "X";
+	String C2 = "X";
+	String C3 = "X";
+	String C4 = "X";
+	String C5 = "X";
+	String D1 = "X";
+	String D2 = "X";
+	String D3 = "X";
+	String D4 = "X";
+	String D5 = "X";
+	String E1 = "X";
+	String E2 = "X";
+	String E3 = "X";
+	String E4 = "X";
+	String E5 = "X";
 		
-			System.out.println("A| X  X  X  X  X");
-			System.out.println("B| X  X  X  X  X");
-			System.out.println("C| X  X  X  X  X");
-			System.out.println("D| X  X  X  X  X");
-			System.out.println("E| X  X  X  X  X");
+			System.out.println("A| " + A1 + "  " + A2 + "  " + A3 + "  " + A4 + "  " + A5);
+			System.out.println("B| " + B1 + "  " + B2 + "  " + B3 + "  " + B4 + "  " + B5);
+			System.out.println("C| " + C1 + "  " + C2 + "  " + C3 + "  " + C4 + "  " + C5);
+			System.out.println("D| " + D1 + "  " + D2 + "  " + D3 + "  " + D4 + "  " + D5);
+			System.out.println("E| " + E1 + "  " + E2 + "  " + E3 + "  " + E4 + "  " + E5);
 			System.out.println("  ______________");
 			System.out.println("   1  2  3  4  5");
 			
@@ -56,7 +81,10 @@ public class battleship
 		ship2 = input.nextLine();
 		System.out.println("Ship 3: ");
 		ship3 = input.nextLine();
-		System.out.println(ship1 + ship2 + ship3);
+	}
+	public static void displayShotGuesses()
+	{
+		
 	}
 
 }
