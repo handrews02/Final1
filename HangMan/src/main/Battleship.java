@@ -26,6 +26,7 @@ public class Battleship
 	
 		if(start == 1)
 		{
+			
 	String A1 = "X";
 	String A2 = "X";
 	String A3 = "X";
@@ -85,7 +86,36 @@ public class Battleship
 	}
 	public static void displayShotGuesses()
 	{
-		
+		String[] coordinates = {"A1", "A2", "A3", "A4", "A5", "B1", "B2", "B3", "B4", "B5", "C1", "C2", "C3", "C4", "C5", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5"};
+		Scanner input = new Scanner(System.in);
+		String shot1 = null;
+		String shot2 = null;
+		String shot3 = null;
+		String shot4 = null;
+		String shot5 = null;
+		System.out.println("Player 2, you will get 5 shots to sink all 3 ships.");
+		System.out.println("Shot 1: ");
+		shot1 = input.nextLine();
+		for (int i = 0; i < coordinates.length; i++)
+	      {
+	    if (coordinates[i] == shot1)
+	    	{
+	    	System.out.println("Hit! Ship at " + i + "is sunk");
+	    	}
+	    else
+	        {
+	    	System.out.print("Miss!");
+	        }
+	        
+	      }
+		System.out.println("Shot 2: ");
+		shot2 = input.nextLine();
+		System.out.println("Shot 3: ");
+		shot3 = input.nextLine();
+		System.out.println("Shot 4: ");
+		shot4 = input.nextLine();
+		System.out.println("Shot 5: ");
+		shot5 = input.nextLine();
 	}
 
 }
