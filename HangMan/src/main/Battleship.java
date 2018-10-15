@@ -10,7 +10,7 @@ public class Battleship
 		displayStart();
 		displayShipPlacement();
 		displayShotGuesses();
-		
+		displayEndGame();
 		
 		
 		
@@ -96,18 +96,19 @@ public class Battleship
 		System.out.println("Player 2, you will get 5 shots to sink all 3 ships.");
 		System.out.println("Shot 1: ");
 		shot1 = input.nextLine();
-		for (int i = 0; i < coordinates.length; i++)
-	      {
-	    if (coordinates[i] == shot1)
-	    	{
-	    	System.out.println("Hit! Ship at " + i + "is sunk");
-	    	}
-	    else
-	        {
-	    	System.out.print("Miss!");
-	        }
-	        
-	      }
+		// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
+		// SOP (hit message) and display board with hit ship
+		// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
+		//for (int i = 0; i < coordinates.length; i++)
+	     // {
+			//if (coordinates[i] == shot1)
+	    	//	{
+			//	System.out.println("Hit! Ship sunken at " + i);
+	    	//	}
+	     // }
+			
+		
+		
 		System.out.println("Shot 2: ");
 		shot2 = input.nextLine();
 		System.out.println("Shot 3: ");
@@ -116,6 +117,12 @@ public class Battleship
 		shot4 = input.nextLine();
 		System.out.println("Shot 5: ");
 		shot5 = input.nextLine();
+	}
+	public static void displayEndGame()
+	{
+		// if all ships are shot down, SOP (Congrats you win blah blah blah)
+		// if all ships aren't shot down, give option for other player to give them 5 more shots
+		// if they decline or all ships aren't shot after second set, SOP (you lose and stuff)
 	}
 
 }
