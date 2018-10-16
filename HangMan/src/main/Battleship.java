@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Battleship 
 {
 
-	public static void main(String[] args) 
+	public static void battleship() 
 	{
 		displayStart();
 		displayShipPlacement();
@@ -99,14 +99,15 @@ public class Battleship
 		// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
 		// SOP (hit message) and display board with hit ship
 		// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
-		//for (int i = 0; i < coordinates.length; i++)
-	     // {
-			//if (coordinates[i] == shot1)
-	    	//	{
-			//	System.out.println("Hit! Ship sunken at " + i);
-	    	//	}
-	     // }
+		for (int i = 0; i < coordinates.length; i++)
+	      {
+			if (coordinates[i] == shot1)
+	    		{
+				System.out.println("Hit! Ship sunken at " + i);
+	    		}
 			
+	      }
+		
 		
 		
 		System.out.println("Shot 2: ");

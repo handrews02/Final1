@@ -13,7 +13,7 @@ public class Hangman {
 	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	private static int count = 0;
 
-	public static void main(String[] args) {
+	public static void hangman() {
 		Scanner sc = new Scanner(System.in);
 
 		while (count < 7 && asterisk.contains("*")) {
