@@ -9,7 +9,7 @@ public class Battleship
 	{
 		displayStart();
 		displayShipPlacement();
-		displayShotGuesses();
+		displayShotGuesses(null, null, null);
 		displayEndGame();
 		
 		
@@ -83,9 +83,12 @@ public class Battleship
 		ship2 = input.nextLine();
 		System.out.println("Ship 3: ");
 		ship3 = input.nextLine();
+		
+
 	}
-	public static void displayShotGuesses()
+	public static void displayShotGuesses(String ship1, String ship2, String ship3)
 	{
+		
 		String[] coordinates = {"A1", "A2", "A3", "A4", "A5", "B1", "B2", "B3", "B4", "B5", "C1", "C2", "C3", "C4", "C5", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5"};
 		Scanner input = new Scanner(System.in);
 		String shot1 = null;
@@ -94,22 +97,9 @@ public class Battleship
 		String shot4 = null;
 		String shot5 = null;
 		System.out.println("Player 2, you will get 5 shots to sink all 3 ships.");
+		//Player 2 will now enter 5 coordinates to "hit" player 1's ships
 		System.out.println("Shot 1: ");
 		shot1 = input.nextLine();
-		// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
-		// SOP (hit message) and display board with hit ship
-		// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
-		for (int i = 0; i < coordinates.length; i++)
-	      {
-			if (coordinates[i] == shot1)
-	    		{
-				System.out.println("Hit! Ship sunken at " + i);
-	    		}
-			
-	      }
-		
-		
-		
 		System.out.println("Shot 2: ");
 		shot2 = input.nextLine();
 		System.out.println("Shot 3: ");
@@ -118,7 +108,66 @@ public class Battleship
 		shot4 = input.nextLine();
 		System.out.println("Shot 5: ");
 		shot5 = input.nextLine();
+		// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
+		// SOP (hit message) and display board with hit ship
+		// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
+		for (int i = 0; i < coordinates.length; i++)
+	      {
+			if (shot1 == ship1) {
+				System.out.println("You have hit a ship!");
+	    	}
+			else if (shot2 == ship1) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot3 == ship1) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot4 == ship1) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot5 == ship1) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot1 == ship2) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot2 == ship2) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot3 == ship2) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot4 == ship2) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot5 == ship2) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot1 == ship3) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot2 == ship3) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot3 == ship3) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot4 == ship3) {
+				System.out.println("You have hit a ship!");
+			}
+			else if (shot5 == ship3) {
+				System.out.println("You have hit a ship!");
+			}
+			else {
+				System.out.println("You have MISSED!");
+			}
+	      }
+	      
 	}
+		
+		
+		
+		
 	public static void displayEndGame()
 	{
 		// if all ships are shot down, SOP (Congrats you win blah blah blah)
