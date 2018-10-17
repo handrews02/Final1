@@ -1,7 +1,7 @@
 package main;
 import java.util.Scanner;
 
-public class HangMan {
+public class Hangman {
 
 	private static String[] words = {"courageous", "magnificent", "terrible", "righteous", "superficial" };
 	private static String word = words[(int) (Math.random() * words.length)];
@@ -10,7 +10,7 @@ public class HangMan {
 	//replaces every letter in the random word that is selected and replaces it with an asterisk
 	private static int attempts = 0;
 
-	public static void main(String[] args) {
+	public static void hangman() {
 		Scanner input = new Scanner(System.in);
 
 		while (attempts < 7 && replace.contains("*")) {
