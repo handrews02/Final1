@@ -26,7 +26,7 @@ public class Battleship
 	
 		if(start == 1)
 		{
-			
+	
 	String A1 = "X";
 	String A2 = "X";
 	String A3 = "X";
@@ -84,86 +84,33 @@ public class Battleship
 		System.out.println("Ship 3: ");
 		ship3 = input.nextLine();
 		
+		displayShotGuesses(ship1, ship2, ship3);
 
 	}
 	public static void displayShotGuesses(String ship1, String ship2, String ship3)
 	{
 		
-		String[] coordinates = {"A1", "A2", "A3", "A4", "A5", "B1", "B2", "B3", "B4", "B5", "C1", "C2", "C3", "C4", "C5", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5"};
 		Scanner input = new Scanner(System.in);
-		String shot1 = null;
-		String shot2 = null;
-		String shot3 = null;
-		String shot4 = null;
-		String shot5 = null;
+		String[] shot = {"1", "2", "3", "4", "5"};
 		System.out.println("Player 2, you will get 5 shots to sink all 3 ships.");
 		//Player 2 will now enter 5 coordinates to "hit" player 1's ships
-		System.out.println("Shot 1: ");
-		shot1 = input.nextLine();
-		System.out.println("Shot 2: ");
-		shot2 = input.nextLine();
-		System.out.println("Shot 3: ");
-		shot3 = input.nextLine();
-		System.out.println("Shot 4: ");
-		shot4 = input.nextLine();
-		System.out.println("Shot 5: ");
-		shot5 = input.nextLine();
-		// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
-		// SOP (hit message) and display board with hit ship
-		// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
-		for (int i = 0; i < coordinates.length; i++)
+		
+		for(int x = 0; x< 5; x++) {
+			System.out.println("Shot " + shot[x]);
+			shot[x] = input.nextLine();
 	      {
-			if (shot1 == ship1) {
+			if (shot[x] == ship1 || shot[x] == ship2 || shot[x] == ship3) {
 				System.out.println("You have hit a ship!");
-	    	}
-			else if (shot2 == ship1) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot3 == ship1) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot4 == ship1) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot5 == ship1) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot1 == ship2) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot2 == ship2) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot3 == ship2) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot4 == ship2) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot5 == ship2) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot1 == ship3) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot2 == ship3) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot3 == ship3) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot4 == ship3) {
-				System.out.println("You have hit a ship!");
-			}
-			else if (shot5 == ship3) {
-				System.out.println("You have hit a ship!");
-			}
+	    	}		
 			else {
 				System.out.println("You have MISSED!");
 			}
-	      }
-	      
+			// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
+			// SOP (hit message) and display board with hit ship
+			// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
+		}
 	}
+}
 		
 		
 		
