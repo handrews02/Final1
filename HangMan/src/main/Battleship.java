@@ -64,7 +64,8 @@ public class Battleship
 		}	
 		else
 		{
-			System.out.print("quit");
+			System.out.print("That's not an option:  " );
+			displayStart();
 		}
 		
 	}
