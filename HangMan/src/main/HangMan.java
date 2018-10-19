@@ -15,6 +15,7 @@ public class Hangman {
 
 		while (attempts < 7 && replace.contains("*")) {
 		//as long as the attempt number is less than 7 and there are still asterisks left, the user still can guess
+			System.out.println("Welcome to Hangman!");
 			System.out.println("Guess any letter in the word");
 			System.out.println(replace);
 			String guess = input.next();
