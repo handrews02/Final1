@@ -94,20 +94,6 @@ public class Battleship
 		Scanner input = new Scanner(System.in);
 		String[] shot = {"1", "2", "3", "4", "5"};
 		System.out.println("Player 2, you will get 5 shots to sink all 3 ships.");
-
-		System.out.println("Shot 1: ");
-		shot1 = input.nextLine();
-		
-		
-		if(player2Choice == player1Choice)
-		{
-			System.out.println("Hit!");
-		}
-		else if(player2Choice != player1Choice)
-		{
-			System.out.println("Miss!");
-		}
-
 		//Player 2 will now enter 5 coordinates to "hit" player 1's ships
 		
 		for(int x = 0; x< 5; x++) {
@@ -127,7 +113,6 @@ public class Battleship
 	}
 }
 		
-
 		
 		
 		
