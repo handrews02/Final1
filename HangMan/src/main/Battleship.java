@@ -96,17 +96,16 @@ public class Battleship
 		System.out.println("Player 2, you will get 5 shots to sink all 3 ships.");
 		System.out.println("Shot 1: ");
 		shot1 = input.nextLine();
-		// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
-		// SOP (hit message) and display board with hit ship
-		// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
-		for (int i = 0; i < coordinates.length; i++)
-	      {
-			if (coordinates[i] == shot1)
-	    		{
-				System.out.println("Hit! Ship sunken at " + i);
-	    		}
-			
-	      }
+		
+		
+		if(player2Choice == player1Choice)
+		{
+			System.out.println("Hit!");
+		}
+		else if(player2Choice != player1Choice)
+		{
+			System.out.println("Miss!");
+		}
 		
 		
 		
