@@ -9,7 +9,6 @@ public class Battleship
 	{
 		displayStart();
 		displayShipPlacement();
-		displayShotGuesses(null, null, null);
 		displayEndGame();
 		
 		
@@ -76,6 +75,7 @@ public class Battleship
 		String ship1 = null;
 		String ship2 = null;
 		String ship3 = null;
+		int x =0;
 		System.out.println("Player 1, choose coordinates for 3 ships. Please use capital letters and no spaces. "
 				+ "Example: A3");
 		System.out.println("Ship 1: ");
@@ -85,19 +85,12 @@ public class Battleship
 		System.out.println("Ship 3: ");
 		ship3 = input.nextLine();
 		
-		displayShotGuesses(ship1, ship2, ship3);
-
-	}
-	public static void displayShotGuesses(String ship1, String ship2, String ship3)
-	{
-		
-		Scanner input = new Scanner(System.in);
-		String[] shot = {"1", "2", "3", "4", "5"};
+		String[] shot = new String[5];
 		System.out.println("Player 2, you will get 5 shots to sink all 3 ships.");
 		//Player 2 will now enter 5 coordinates to "hit" player 1's ships
 		
-		for(int x = 0; x< 5; x++) {
-			System.out.println("Shot " + shot[x]);
+		while(x == 5){
+			System.out.println("Shot ");
 			shot[x] = input.nextLine();
 	      {
 			if (shot[x] == ship1 || shot[x] == ship2 || shot[x] == ship3) {
@@ -106,6 +99,7 @@ public class Battleship
 			else {
 				System.out.println("You have MISSED!");
 			}
+			x++;
 			// sequential search through array of coordinates, if ship coordinate matches shot coordinate, 
 			// SOP (hit message) and display board with hit ship
 			// if coordinates don't match, SOP (miss message) and continue on to next shot attempt 
